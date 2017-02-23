@@ -2,10 +2,18 @@
   "name": "nanoleaf",
   "version": "1.0.0",
   "description": "Nanoleaf Aurora API client",
-  "main": "index.js",
+  "main": "/lib/aurora.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp"
   },
   "author": "Darren Thomas",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-mocha": "^4.0.1",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
+  }
 }
