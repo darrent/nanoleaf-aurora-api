@@ -1,0 +1,11 @@
+{
+  "name": "nanoleaf",
+  "version": "1.0.0",
+  "description": "Nanoleaf Aurora API client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Darren Thomas",
+  "license": "ISC"
+}
