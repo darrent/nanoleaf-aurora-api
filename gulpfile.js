@@ -1,9 +1,10 @@
-var gulp      = require('gulp'),
-    jsHint    = require('gulp-jshint'),
-    jscs      = require('gulp-jscs'),
-    gulpMocha = require('gulp-mocha');
+var gulp = require('gulp'),
+  jsHint = require('gulp-jshint'),
+  jscs = require('gulp-jscs'),
+  mocha = require('gulp-mocha'),
+  util = require('gulp-util');
 
-var jsFiles = ['*.js', 'lib/**/*.js'];
+var jsFiles = ['*.js', 'lib/**/*.js', 'tests/**/*.js'];
 
 gulp.task('style', function() {
   return gulp.src(jsFiles)
@@ -15,14 +16,17 @@ gulp.task('style', function() {
 });
 
 gulp.task('test', function(jsTestFiles) {
-  gulp.src(jsFiles, {
+  return gulp.src(jsFiles, {
       read: false
     })
-    .pipe(gulpMocha());
+    .pipe(mocha({
+      reporter: 'spec'
+    }))
+    .on('error', util.log);
 });
 
 gulp.task('watch', function() {
-  gulp.watch(jsFiles, ['style', 'test']);
+  gulp.watch(jsFiles, ['test']);
 });
 
 gulp.task('default', ['style', 'test']);
