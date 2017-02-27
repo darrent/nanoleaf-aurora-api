@@ -1,5 +1,5 @@
 {
-  "name": "nanoleaf",
+  "name": "nanoleaf-aurora-client",
   "version": "1.0.0",
   "author": "Darren Thomas <darren.thomas@me.com>",
   "description": "Nanoleaf Aurora API client",
