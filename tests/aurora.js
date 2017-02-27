@@ -50,7 +50,7 @@ describe('Aurora Api tests:', () => {
     });
 
     it('should assign a default protocol', () => {
-      api.protocol.should.equal('http');
+      api.protocol.should.equal('http:');
     });
 
   });
@@ -83,11 +83,12 @@ describe('Aurora Api tests:', () => {
 
     describe('Power status', () => {
       it('should request', () => {
+        const expectedPowerStatus = {
+          value: true
+        };
         const request = nock(`http://${options.host}:${options.port}`)
-          .get(`${options.base}${options.accessToken}/state/on`, {
-            value: true
-          })
-          .reply(200);
+          .get(`${options.base}${options.accessToken}/state/on`)
+          .reply(200, expectedPowerStatus);
 
         api.getPowerStatus().should.be.fulfilled();
         request.done();
@@ -95,9 +96,7 @@ describe('Aurora Api tests:', () => {
 
       it('should reject when request fails', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .get(`${options.base}${options.accessToken}/state/on`, {
-            value: true
-          })
+          .get(`${options.base}${options.accessToken}/state/on`)
           .reply(500);
 
         api.getPowerStatus().should.be.rejected();
