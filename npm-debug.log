@@ -1,0 +1,126 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.4.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@4.0.5
+3 info using node@v7.4.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/dt52474/Documents/source/node/projects/aurora-client',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/dt52474/.npm/nanoleaf-aurora-client/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/dt52474/.npm correctMkdir not in flight; initializing
+10 info lifecycle nanoleaf-aurora-client@1.0.0~prepublish: nanoleaf-aurora-client@1.0.0
+11 silly lifecycle nanoleaf-aurora-client@1.0.0~prepublish: no script for prepublish, continuing
+12 info lifecycle nanoleaf-aurora-client@1.0.0~prepare: nanoleaf-aurora-client@1.0.0
+13 silly lifecycle nanoleaf-aurora-client@1.0.0~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/dt52474/.npm/nanoleaf-aurora-client/1.0.0/package.tgz',
+14 verbose tar pack   '/Users/dt52474/Documents/source/node/projects/aurora-client' ]
+15 verbose tarball /Users/dt52474/.npm/nanoleaf-aurora-client/1.0.0/package.tgz
+16 verbose folder /Users/dt52474/Documents/source/node/projects/aurora-client
+17 verbose addLocalTarball adding from inside cache /Users/dt52474/.npm/nanoleaf-aurora-client/1.0.0/package.tgz
+18 verbose correctMkdir /Users/dt52474/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd nanoleaf-aurora-client@1.0.0
+20 verbose afterAdd /Users/dt52474/.npm/nanoleaf-aurora-client/1.0.0/package/package.json not in flight; writing
+21 verbose correctMkdir /Users/dt52474/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /Users/dt52474/.npm/nanoleaf-aurora-client/1.0.0/package/package.json written
+23 silly publish { name: 'nanoleaf-aurora-client',
+23 silly publish   version: '1.0.0',
+23 silly publish   author: { name: 'Darren Thomas', email: 'darren.thomas@me.com' },
+23 silly publish   description: 'Nanoleaf Aurora API client',
+23 silly publish   main: '/lib/aurora.js',
+23 silly publish   homepage: 'https://github.com/darrent/nanoleaf-aurora-api',
+23 silly publish   repository:
+23 silly publish    { type: 'git',
+23 silly publish      url: 'git+https://github.com/darrent/nanoleaf-aurora-api.git' },
+23 silly publish   scripts: { test: 'gulp' },
+23 silly publish   engine: { node: '>=4.2.2' },
+23 silly publish   licenses:
+23 silly publish    [ { type: 'The MIT License',
+23 silly publish        url: 'http://www.opensource.org/licenses/mit-license.php' } ],
+23 silly publish   devDependencies:
+23 silly publish    { gulp: '^3.9.1',
+23 silly publish      'gulp-jscs': '^4.0.0',
+23 silly publish      'gulp-jshint': '^2.0.4',
+23 silly publish      'gulp-mocha': '^3.0.1',
+23 silly publish      'gulp-util': '^3.0.8',
+23 silly publish      jshint: '^2.9.4',
+23 silly publish      'jshint-stylish': '^2.2.1',
+23 silly publish      nock: '^9.0.7',
+23 silly publish      should: '^11.2.0',
+23 silly publish      sinon: '^1.17.7' },
+23 silly publish   readme: '# JavaScript Nanoleaf Aurora API for node.js #\n\nA node.js module, which provides a wrapper for the Nanoleaf Aurora API.\n\n[![CircleCI](https://circleci.com/gh/darrent/nanoleaf-aurora-api/tree/master.svg?style=svg)](https://circleci.com/gh/darrent/nanoleaf-aurora-api/tree/master)\n\n## Installation ##\n\nInstall with the node package manager [npm](http://npmjs.org):\n\n```shell\n$ npm install nanoleaf-aurora-client\n```\n\n## Examples ##\n\n### Create the client ###\n\n```javascript\nvar api = new AuroraApi({\n    host: \'192.168.1.160\',\n    base: \'/api/beta/\',\n    port: \'16021\',\n    accessToken: \'TOKEN\'\n  });\n\n```',
+23 silly publish   readmeFilename: 'README.md',
+23 silly publish   gitHead: '1510dde988ecc5709c09a9a54d2145621e1bdf17',
+23 silly publish   bugs: { url: 'https://github.com/darrent/nanoleaf-aurora-api/issues' },
+23 silly publish   _id: 'nanoleaf-aurora-client@1.0.0',
+23 silly publish   _shasum: 'd309eb52237968d89f9d7df2a2b070b2a137b352',
+23 silly publish   _from: '.' }
+24 info lifecycle nanoleaf-aurora-client@1.0.0~prepublishOnly: nanoleaf-aurora-client@1.0.0
+25 silly lifecycle nanoleaf-aurora-client@1.0.0~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name nanoleaf-aurora-client
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'nanoleaf-aurora-client',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'nanoleaf-aurora-client',
+30 silly mapToRegistry   name: 'nanoleaf-aurora-client',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/nanoleaf-aurora-client
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/dt52474/.npm/nanoleaf-aurora-client/1.0.0/package.tgz
+34 verbose request uri https://registry.npmjs.org/nanoleaf-aurora-client
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 8:36:10 PM
+37 verbose request using bearer token for auth
+38 verbose request id aa1d78d9573817fe
+39 http request PUT https://registry.npmjs.org/nanoleaf-aurora-client
+40 http 403 https://registry.npmjs.org/nanoleaf-aurora-client
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '128',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Mon, 27 Feb 2017 20:36:11 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-lcy1140-LCY',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1488227770.669197,VS0,VE866',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 verbose request invalidating /Users/dt52474/.npm/registry.npmjs.org/nanoleaf-aurora-client on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: "You cannot publish over the previously published version 1.0.0. Try bumping the version to 2.0.0" : nanoleaf-aurora-client
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+45 verbose statusCode 403
+46 verbose pkgid nanoleaf-aurora-client
+47 verbose cwd /Users/dt52474/Documents/source/node/projects/aurora-client
+48 error Darwin 16.4.0
+49 error argv "/usr/local/Cellar/node/7.4.0/bin/node" "/usr/local/bin/npm" "publish"
+50 error node v7.4.0
+51 error npm  v4.0.5
+52 error code E403
+53 error "You cannot publish over the previously published version 1.0.0. Try bumping the version to 2.0.0" : nanoleaf-aurora-client
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
