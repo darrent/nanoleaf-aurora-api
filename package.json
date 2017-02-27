@@ -1,6 +1,6 @@
 {
   "name": "nanoleaf-aurora-client",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Darren Thomas <darren.thomas@me.com>",
   "description": "Nanoleaf Aurora API client",
   "main": "/lib/aurora.js",
@@ -15,10 +15,12 @@
   "engine": {
     "node": ">=4.2.2"
   },
-  "licenses": [{
-    "type": "The MIT License",
-    "url": "http://www.opensource.org/licenses/mit-license.php"
-  }],
+  "licenses": [
+    {
+      "type": "The MIT License",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-jscs": "^4.0.0",
