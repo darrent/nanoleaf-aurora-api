@@ -6,6 +6,12 @@ A node.js module, which provides a wrapper for the Nanoleaf Aurora API.
 
 ## Installation ##
 
+Install with the node package manager [npm](http://npmjs.org):
+
+```shell
+$ npm install nanoleaf-aurora-client
+```
+
 ## Examples ##
 
 ### Create the client ###
