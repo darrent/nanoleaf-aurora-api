@@ -107,10 +107,12 @@ describe('Aurora Api tests:', () => {
 
     describe('Turn on', () => {
       it('should request', () => {
+        const body = JSON.stringify({
+          value: true
+        });
+
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/on`, {
-            value: true
-          })
+          .put(`${options.base}${options.accessToken}/state/on`, body)
           .reply(200);
 
         api.turnOn().should.be.fulfilled();
