@@ -1,12 +1,12 @@
 var gulp = require('gulp'),
   jsHint = require('gulp-jshint'),
-  jscs = require('gulp-jscs'),
-  mocha = require('gulp-mocha'),
-  util = require('gulp-util');
+  jscs   = require('gulp-jscs'),
+  mocha  = require('gulp-mocha'),
+  util   = require('gulp-util');
 
 var jsFiles = ['*.js', 'lib/**/*.js', 'tests/**/*.js'];
 
-gulp.task('style', function() {
+gulp.task('style', function () {
   return gulp.src(jsFiles)
     .pipe(jsHint())
     .pipe(jsHint.reporter('jshint-stylish', {
@@ -15,7 +15,7 @@ gulp.task('style', function() {
     .pipe(jscs());
 });
 
-gulp.task('test', function(jsTestFiles) {
+gulp.task('test', function (jsTestFiles) {
   return gulp.src(jsFiles, {
       read: false
     })
@@ -25,7 +25,7 @@ gulp.task('test', function(jsTestFiles) {
     .on('error', util.log);
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(jsFiles, ['test']);
 });
 

@@ -351,7 +351,7 @@ describe('Aurora Api tests:', () => {
           })
           .reply(200);
 
-        api.selectEffect('New Affect').should.be.fulfilled();
+        api.setEffect('New Affect').should.be.fulfilled();
         request.done();
       });
 
@@ -362,7 +362,7 @@ describe('Aurora Api tests:', () => {
           })
           .reply(500);
 
-        api.selectEffect('New Affect').should.be.rejected();
+        api.setEffect('New Affect').should.be.rejected();
         request.done();
       });
     });
