@@ -1,9 +1,9 @@
 const should = require('should'),
-  sinon = require('sinon'),
-  http = require('http'),
-  assert = require('assert'),
-  nock = require('nock'),
-  AuroraApi = require('../lib/aurora');
+  sinon      = require('sinon'),
+  http       = require('http'),
+  assert     = require('assert'),
+  nock       = require('nock'),
+  AuroraApi  = require('../lib/aurora');
 
 function getOptions() {
   return {
