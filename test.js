@@ -3,7 +3,7 @@ const should = require('should'),
   http       = require('http'),
   assert     = require('assert'),
   nock       = require('nock'),
-  AuroraApi  = require('../lib/aurora');
+  AuroraApi  = require('./index');
 
 function getOptions() {
   return {
