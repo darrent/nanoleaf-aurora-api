@@ -199,7 +199,7 @@ AuroraApi.prototype.setEffect = function (effect) {
 };
 
 AuroraApi.prototype.listEffects = function () {
-  const requestOptions = this.makeGetRequestOptions('/effects/list');
+  const requestOptions = this.makeGetRequestOptions('/effects/effectsList');
 
   return this.doRequest(requestOptions);
 };

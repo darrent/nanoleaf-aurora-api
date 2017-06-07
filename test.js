@@ -381,7 +381,7 @@ describe('Aurora Api tests:', () => {
         ];
 
         const request = nock(`http://${options.host}:${options.port}`)
-          .get(`${options.base}${options.accessToken}/effects/list`)
+          .get(`${options.base}${options.accessToken}/effects/effectsList`)
           .reply(200, expectedEffects);
 
         api.listEffects().should.be.fulfilled(expectedEffects);
@@ -390,7 +390,7 @@ describe('Aurora Api tests:', () => {
 
       it('should reject when request fails', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .get(`${options.base}${options.accessToken}/effects/list`)
+          .get(`${options.base}${options.accessToken}/effects/effectsList`)
           .reply(500);
 
         api.listEffects().should.be.rejected();
