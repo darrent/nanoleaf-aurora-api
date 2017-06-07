@@ -19,7 +19,7 @@ $ npm install nanoleaf-aurora-client
 ```javascript
 var api = new AuroraApi({
     host: '192.168.1.160',
-    base: '/api/beta/',
+    base: '/api/v1/',
     port: '16021',
     accessToken: 'TOKEN'
   });
