@@ -121,16 +121,20 @@ AuroraApi.prototype.getPowerStatus = function () {
 };
 
 AuroraApi.prototype.turnOn = function () {
-  const requestOptions = this.makePutRequest('/state/on', {
-    value: true
+  const requestOptions = this.makePutRequest('/state', {
+    on: {
+			value: true
+		}
   });
 
   return this.doRequest(requestOptions);
 };
 
 AuroraApi.prototype.turnOff = function () {
-  const requestOptions = this.makePutRequest('/state/on', {
-    value: false
+  const requestOptions = this.makePutRequest('/state', {
+    on: {
+			value: false
+		}
   });
 
   return this.doRequest(requestOptions);
@@ -143,8 +147,8 @@ AuroraApi.prototype.getBrightness = function () {
 };
 
 AuroraApi.prototype.setBrightness = function (value) {
-  const requestOptions = this.makePutRequest('/state/brightness', {
-    'brightness': value
+  const requestOptions = this.makePutRequest('/state', {
+    brightness: value
   });
 
   return this.doRequest(requestOptions);
@@ -157,8 +161,22 @@ AuroraApi.prototype.getHue = function () {
 };
 
 AuroraApi.prototype.setHue = function (value) {
-  const requestOptions = this.makePutRequest('/state/hue', {
-    'hue': value
+  const requestOptions = this.makePutRequest('/state', {
+    hue: value
+  });
+
+  return this.doRequest(requestOptions);
+};
+
+AuroraApi.prototype.getSat = function () {
+  const requestOptions = this.makeGetRequestOptions('/state/sat');
+
+  return this.doRequest(requestOptions);
+};
+
+AuroraApi.prototype.setSat = function (value) {
+  const requestOptions = this.makePutRequest('/state', {
+    sat: value
   });
 
   return this.doRequest(requestOptions);
@@ -171,8 +189,8 @@ AuroraApi.prototype.getColourTemperature = function () {
 };
 
 AuroraApi.prototype.setColourTemperature = function (value) {
-  const requestOptions = this.makePutRequest('/state/ct', {
-    'ct': value
+  const requestOptions = this.makePutRequest('/state', {
+    ct: value
   });
 
   return this.doRequest(requestOptions);
