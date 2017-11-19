@@ -229,3 +229,9 @@ api.identify()
     console.error(err);
   });
 ```
+
+## Changelog ##
+
+### 1.1.5 (2017.11.13)
+- (oliverschulze) added setSat and getSat function
+- (oliverschulze) adapted state changing api calls, to match Nanoleaf Aurora 2.2.0 firmware
