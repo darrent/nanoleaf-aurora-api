@@ -231,6 +231,8 @@ api.identify()
 ```
 
 ## Changelog ##
+### 1.1.6 (2018.01.18)
+- (darrent) Fixed unit tests.  No additional features added.
 
 ### 1.1.5 (2017.11.13)
 - (oliverschulze) added setSat and getSat function
