@@ -231,6 +231,9 @@ api.identify()
 ```
 
 ## Changelog ##
+### 1.1.7 (2018.01.18)
+- (darrent) Fixed broken build 🙄.  No additional features added.
+
 ### 1.1.6 (2018.01.18)
 - (darrent) Fixed unit tests.  No additional features added.
 
