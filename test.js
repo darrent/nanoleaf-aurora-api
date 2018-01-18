@@ -108,11 +108,13 @@ describe('Aurora Api tests:', () => {
     describe('Turn on', () => {
       it('should request', () => {
         const body = JSON.stringify({
-          value: true
+          on: {
+            value: true
+          }
         });
 
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/on`, body)
+          .put(`${options.base}${options.accessToken}/state`, body)
           .reply(200);
 
         api.turnOn().should.be.fulfilled();
@@ -121,8 +123,10 @@ describe('Aurora Api tests:', () => {
 
       it('should reject when request fails', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/on`, {
-            value: true
+          .put(`${options.base}${options.accessToken}/state`, {
+            on: {
+              value: true
+            }  
           })
           .reply(500);
 
@@ -134,8 +138,10 @@ describe('Aurora Api tests:', () => {
     describe('Turn off', () => {
       it('should request', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/on`, {
-            value: false
+          .put(`${options.base}${options.accessToken}/state`, {
+            on: {
+              value: false
+            }
           })
           .reply(200);
 
@@ -145,8 +151,10 @@ describe('Aurora Api tests:', () => {
 
       it('should reject when request fails', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/on`, {
-            value: false
+          .put(`${options.base}${options.accessToken}/state`, {
+            on: {
+              value: false
+            }  
           })
           .reply(500);
 
@@ -183,7 +191,7 @@ describe('Aurora Api tests:', () => {
     describe('Set brightness', () => {
       it('should request', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/brightness`, {
+          .put(`${options.base}${options.accessToken}/state`, {
             'brightness': 100
           })
           .reply(200);
@@ -194,7 +202,7 @@ describe('Aurora Api tests:', () => {
 
       it('should reject when request fails', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/brightness`, {
+          .put(`${options.base}${options.accessToken}/state`, {
             'brightness': 100
           })
           .reply(500);
@@ -232,7 +240,7 @@ describe('Aurora Api tests:', () => {
     describe('Set hue', () => {
       it('should request', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/hue`, {
+          .put(`${options.base}${options.accessToken}/state`, {
             'hue': 120
           })
           .reply(200);
@@ -243,7 +251,7 @@ describe('Aurora Api tests:', () => {
 
       it('should reject when request fails', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/hue`)
+          .put(`${options.base}${options.accessToken}/state`)
           .reply(500);
 
         api.setHue(120).should.be.rejected();
@@ -279,7 +287,7 @@ describe('Aurora Api tests:', () => {
     describe('Set colour temperature', () => {
       it('should request', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/ct`, {
+          .put(`${options.base}${options.accessToken}/state`, {
             'ct': 2000
           })
           .reply(200);
@@ -290,7 +298,7 @@ describe('Aurora Api tests:', () => {
 
       it('should reject when request fails', () => {
         const request = nock(`http://${options.host}:${options.port}`)
-          .put(`${options.base}${options.accessToken}/state/ct`)
+          .put(`${options.base}${options.accessToken}/state`)
           .reply(500);
 
         api.setColourTemperature(2000).should.be.rejected();
