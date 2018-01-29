@@ -194,6 +194,18 @@ api.listEffects()
   });
 ```
 
+### List full device info and effects data ###
+
+```javascript
+api.getEffectsRequestAll()
+  .then(function(effects) {
+    console.log('All data: ' + effects);
+  })
+  .catch(function(err) {
+    console.error(err);
+  });
+```
+
 ### Get the device orientation ###
 
 ```javascript

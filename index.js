@@ -239,3 +239,11 @@ AuroraApi.prototype.identify = function () {
 
   return this.doRequest(requestOptions);
 };
+
+AuroraApi.prototype.getEffectsRequestAll = function (effect) {
+  const requestOptions = this.makePutRequest('/effects', {
+    'write': {'command': 'requestAll'}
+  });
+
+  return this.doRequest(requestOptions);
+}
