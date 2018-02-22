@@ -182,6 +182,16 @@ AuroraApi.prototype.setSat = function (value) {
   return this.doRequest(requestOptions);
 };
 
+AuroraApi.prototype.setHSV = function (h,s,v) {
+  const requestOptions = this.makePutRequest('/state', {
+    sat: s,
+    hue: h,
+    brightness: v
+  });
+
+  return this.doRequest(requestOptions);
+};
+
 AuroraApi.prototype.getColourTemperature = function () {
   const requestOptions = this.makeGetRequestOptions('/state/ct');
 
