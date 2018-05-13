@@ -1,4 +1,4 @@
-# JavaScript Nanoleaf Aurora API for node.js #
+# Nanoleaf Aurora API client #
 
 A node.js module, which provides a wrapper for the Nanoleaf Aurora API.
 
