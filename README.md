@@ -12,6 +12,15 @@ Install with the node package manager [npm](https://www.npmjs.com/package/nanole
 $ npm install nanoleaf-aurora-client
 ```
 
+## Get your token ##
+
+You can request via API query a token from your nanoleaf panel controller.
+To do so, hold the on-off button down for 5-7 seconds until the LED starts flashing in a pattern.
+
+The run the script "getToken.js" - token will be print in the console.
+
+Note: edit the js file to use the correct IP and PORT to query your nanoleaf Aurora.
+
 ## Examples ##
 
 ### Create the client ###
