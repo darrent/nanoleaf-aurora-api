@@ -240,6 +240,10 @@ api.identify()
 ```
 
 ## Changelog ##
+
+### 1.2.2 (2018.01.18)
+- (Xyala) Added script to get token.
+
 ### 1.1.8 (2018.01.18)
 - (darrent) Fixed unit tests.  No additional features added.
 
