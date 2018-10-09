@@ -188,9 +188,12 @@ AuroraApi.prototype.getBrightness = function () {
   return this.doRequest(requestOptions);
 };
 
-AuroraApi.prototype.setBrightness = function (value) {
+AuroraApi.prototype.setBrightness = function (value, duration = 0) {
   const requestOptions = this.makePutRequest('/state', {
-    brightness: value
+    brightness: {
+      value: value,
+      duration: duration
+    }
   });
 
   return this.doRequest(requestOptions);
