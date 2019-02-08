@@ -1,5 +1,7 @@
 # Nanoleaf Aurora API client #
 
+## ⚠️ This project is no active.  I no longer have access to a Nanoleaf device ⚠️ ##
+
 A node.js module, which provides a wrapper for the Nanoleaf Aurora API.
 
 [![CircleCI](https://circleci.com/gh/darrent/nanoleaf-aurora-api/tree/master.svg?style=svg)](https://circleci.com/gh/darrent/nanoleaf-aurora-api/tree/master)
