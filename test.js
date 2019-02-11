@@ -126,7 +126,7 @@ describe('Aurora Api tests:', () => {
           .put(`${options.base}${options.accessToken}/state`, {
             on: {
               value: true
-            }  
+            }
           })
           .reply(500);
 
@@ -154,7 +154,7 @@ describe('Aurora Api tests:', () => {
           .put(`${options.base}${options.accessToken}/state`, {
             on: {
               value: false
-            }  
+            }
           })
           .reply(500);
 
@@ -192,22 +192,24 @@ describe('Aurora Api tests:', () => {
       it('should request', () => {
         const request = nock(`http://${options.host}:${options.port}`)
           .put(`${options.base}${options.accessToken}/state`, {
-            'brightness': 100
+            'brightness': 100,
+            'duration': 1
           })
           .reply(200);
 
-        api.setBrightness(100).should.be.fulfilled();
+        api.setBrightness(100, 1).should.be.fulfilled();
         request.done();
       });
 
       it('should reject when request fails', () => {
         const request = nock(`http://${options.host}:${options.port}`)
           .put(`${options.base}${options.accessToken}/state`, {
-            'brightness': 100
+            'brightness': 100,
+            'duration': 1
           })
           .reply(500);
 
-        api.setBrightness(100).should.be.rejected();
+        api.setBrightness(100, 1).should.be.rejected();
         request.done();
       });
     });

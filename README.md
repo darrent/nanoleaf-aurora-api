@@ -97,10 +97,22 @@ api.getBrightness()
   });
 ```
 
-### Set the brightness value ###
+### Set the brightness value immediately ###
 
 ```javascript
 api.setBrightness(50)
+  .then(function() {
+    console.log('Success!');
+  })
+  .catch(function(err) {
+    console.error(err);
+  });
+```
+
+### Set the brightness value with a duration of 5 seconds ###
+
+```javascript
+api.setBrightness(50, 5)
   .then(function() {
     console.log('Success!');
   })
@@ -242,6 +254,9 @@ api.identify()
 ```
 
 ## Changelog ##
+
+### 1.2.3 (2018.10.09)
+- (J. Hillert) Added optional duration when setting brightness.
 
 ### 1.2.2 (2018.01.18)
 - (Xyala) Added script to get token.
