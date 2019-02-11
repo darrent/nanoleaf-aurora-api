@@ -190,7 +190,7 @@ AuroraApi.prototype.getBrightness = function () {
 
 AuroraApi.prototype.setBrightness = function (value) {
   const requestOptions = this.makePutRequest('/state', {
-    brightness: value
+	brightness: { 'value': value }
   });
 
   return this.doRequest(requestOptions);
@@ -204,7 +204,7 @@ AuroraApi.prototype.getHue = function () {
 
 AuroraApi.prototype.setHue = function (value) {
   const requestOptions = this.makePutRequest('/state', {
-    hue: value
+    hue: { 'value': value }
   });
 
   return this.doRequest(requestOptions);
@@ -218,7 +218,7 @@ AuroraApi.prototype.getSat = function () {
 
 AuroraApi.prototype.setSat = function (value) {
   const requestOptions = this.makePutRequest('/state', {
-    sat: value
+    sat: { 'value': value }
   });
 
   return this.doRequest(requestOptions);
@@ -226,9 +226,9 @@ AuroraApi.prototype.setSat = function (value) {
 
 AuroraApi.prototype.setHSV = function (h,s,v) {
   const requestOptions = this.makePutRequest('/state', {
-    sat: s,
-    hue: h,
-    brightness: v
+    sat: { value: s },
+    hue: { value: h },
+    brightness: { value: v }
   });
 
   return this.doRequest(requestOptions);
@@ -237,9 +237,9 @@ AuroraApi.prototype.setHSV = function (h,s,v) {
 AuroraApi.prototype.setRGB = function (r,g,b) {
   var hsv = this.rgb2hsv(r,g,b);
   const requestOptions = this.makePutRequest('/state', {
-    sat: hsv.s,
-    hue: hsv.h,
-    brightness: hsv.v
+    sat: { value: hsv.s },
+    hue: { value: hsv.h },
+    brightness: { value: hsv.v }
   });
 
   return this.doRequest(requestOptions);
@@ -253,7 +253,7 @@ AuroraApi.prototype.getColourTemperature = function () {
 
 AuroraApi.prototype.setColourTemperature = function (value) {
   const requestOptions = this.makePutRequest('/state', {
-    ct: value
+    ct: { 'value': value }
   });
 
   return this.doRequest(requestOptions);
