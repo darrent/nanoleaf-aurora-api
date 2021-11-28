@@ -241,6 +241,15 @@ api.identify()
 
 ## Changelog ##
 
+### 1.3.0 (28.11.2021)
+- (daniel_2k) Added method for writing custom effects
+- (daniel_2k) Added SSE subscription for getting push notifications (e.g. using gestures)
+- (daniel_2k) Added setRythmMode
+- (daniel_2k) Added duration parameter for setBrightness
+- (daniel_2k) Changes to comply with nanoloeaf Aurora API
+- (daniel_2k) Fixed handling timeout parameter
+
+
 ### 1.2.2 (2018.01.18)
 - (Xyala) Added script to get token.
 
